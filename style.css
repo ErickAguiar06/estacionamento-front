@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background: #222;
+  background: #030592;
   color: #fff;
   padding: 1.5em 2em;
   position: relative;
@@ -101,6 +101,17 @@ header {
 }
 .modal-content button.fechar:hover {
   color: #e74c3c;
+}
+
+button {
+  background: #030592;
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.2em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
 }
 
 /* Responsividade */
