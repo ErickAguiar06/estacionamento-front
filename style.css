@@ -1,0 +1,126 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  color: #222;
+  min-height: 100vh;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 1.5em 2em;
+  position: relative;
+  box-shadow: 0 2px 8px #0002;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.7em;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+  transition: color 0.2s;
+}
+#menu-btn:hover {
+  color: #ffd700;
+}
+
+#menu-content {
+  position: absolute;
+  right: 2em;
+  top: 4em;
+  background: #fff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px #0002;
+  padding: 1.2em 1.5em;
+  z-index: 15;
+  min-width: 180px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.estadia-card {
+  background: #fff;
+  margin: 1.5em auto;
+  padding: 1.5em 2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0001;
+  max-width: 500px;
+  transition: box-shadow 0.2s;
+}
+.estadia-card:hover {
+  box-shadow: 0 4px 24px #0002;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #0007;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2em 2.5em;
+  border-radius: 12px;
+  min-width: 320px;
+  max-width: 90vw;
+  position: relative;
+  box-shadow: 0 8px 32px #0003;
+}
+
+.modal-content button.fechar {
+  position: absolute;
+  top: 0.7em;
+  right: 0.7em;
+  background: none;
+  border: none;
+  font-size: 1.3em;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.modal-content button.fechar:hover {
+  color: #e74c3c;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  header {
+    padding: 1em 1em;
+    font-size: 1em;
+  }
+  #menu-content {
+    right: 1em;
+    top: 3.5em;
+    min-width: 140px;
+    padding: 1em;
+  }
+  .estadia-card {
+    padding: 1em 1em;
+    max-width: 95vw;
+  }
+  .modal-content {
+    padding: 1.2em 1em;
+    min-width: 0;
+  }
+}
